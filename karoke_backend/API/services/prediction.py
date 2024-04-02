@@ -1,8 +1,8 @@
 import os
-import pickle
 import json
 import pandas as pd
 from rest_framework import status
+from sklearn.utils.parallel import joblib
 
 base_path = os.getcwd()
 pickle_path = os.path.normpath(base_path + os.sep + "pickle")
@@ -19,7 +19,7 @@ class Prediction:
 
         pickle_file = os.path.normpath(pickle_path + os.sep + "model.sav")
         try:
-            model = pickle.load(open(pickle_file, "rb"))
+            model = joblib.load(pickle_file)
             prediction = model.predict(df_pred)
             print(prediction)
 
@@ -29,6 +29,6 @@ class Prediction:
             return return_dict
 
         except Exception as e:
-            return_dict["response"] = "Exception when prediction: " + str(e.__str__)
+            return_dict["response"] = "Exception when prediction: " + str(e)
             return_dict["status"] = status.HTTP_500_INTERNAL_SERVER_ERROR
             return return_dict
