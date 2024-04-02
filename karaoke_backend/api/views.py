@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from API.services.prediction import Prediction
-from API.services.training import Training
+from api.services.prediction import Prediction
+from api.services.training import Training
 
 
 class TrainModel(APIView):
