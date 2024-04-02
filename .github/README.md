@@ -1,7 +1,7 @@
 <div align="center">
-<h1>🎤 AI-Karoke-Backend</h1>
+<h1>🎤 AI-Karaoke-Backend</h1>
 
-An API built for the AI-Karoke event
+An API built for the AI-Karaoke event
 
 For instructions on how to use the API refer to `📁 docs/routes.md`
 
@@ -19,10 +19,10 @@ After cloning the repository, run the following command in your `venv`:
 pip install -r requirements.txt
 ```
 
-Switch to the `karoke_backend` project:
+Switch to the `karaoke_backend` project:
 
 ```bash
-cd karoke_backend
+cd karaoke_backend
 ```
 
 and start the server:
@@ -36,11 +36,11 @@ python ./manage.py runserver 0.0.0.0:8000
 To build the project for deployment, containerize the app using the Dockerfile
 
 ```bash
-docker buildx build -t ai-karoke .
+docker buildx build -t ai-karaoke .
 ```
 
 and then run the image
 
 ```bash
-docker run -it -p 8000:8000 ai-karoke
+docker run -it -p 8000:8000 ai-karaoke
 ```

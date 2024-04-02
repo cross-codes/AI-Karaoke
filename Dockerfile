@@ -6,7 +6,7 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-WORKDIR ./karoke_backend
+WORKDIR ./karaoke_backend
 EXPOSE 8000
 
 ENTRYPOINT ["python", "./manage.py"]

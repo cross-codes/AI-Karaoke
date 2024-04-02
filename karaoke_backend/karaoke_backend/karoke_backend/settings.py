@@ -29,7 +29,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "karoke_backend.urls"
+ROOT_URLCONF = "karaoke_backend.urls"
 
 TEMPLATES = [
     {
@@ -47,7 +47,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "karoke_backend.wsgi.application"
+WSGI_APPLICATION = "karaoke_backend.wsgi.application"
 
 
 DATABASES = {
