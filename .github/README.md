@@ -30,3 +30,17 @@ and start the server:
 ```bash
 python ./manage.py runserver 0.0.0.0:8000
 ```
+
+## Build
+
+To build the project for deployment, containerize the app using the Dockerfile
+
+```bash
+docker buildx build -t ai-karoke .
+```
+
+and then run the image
+
+```bash
+docker run -it -p 8000:8000 ai-karoke
+```
