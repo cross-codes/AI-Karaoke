@@ -1,3 +1,0 @@
-TARGET = "churn"
-MAX_DEPTH = 10
-N_ESTIMATORS = 100
