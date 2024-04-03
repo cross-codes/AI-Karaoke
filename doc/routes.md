@@ -70,10 +70,10 @@ Type `E1` if the model training failed
         "<Integer 3>"
     ],
     "prediction": [
-        "<string, 4">,
-        "<string, 5">,
-        "<string, 6">,
-        "<string, 7">
+        "<string, 4>",
+        "<string, 5>",
+        "<string, 6>",
+        "<string, 7>"
     ]
 }
 ```
