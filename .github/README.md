@@ -3,7 +3,7 @@
 
 An API built for the AI-Karaoke event
 
-For instructions on how to use the API refer to `📁 docs/routes.md`
+For instructions on how to use the API refer to `📁 doc/routes.md`
 
 Current version : 1.0
 
