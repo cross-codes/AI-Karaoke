@@ -10,6 +10,7 @@ def gen_metadata():
 
     train_data = path.normpath(data_path + sep + "knn_dataset.csv")
     df = read_csv(train_data)
+    df = df.sample(frac=1)
     X = df[["Mood", "Energy", "Beats"]].to_numpy()
     label_encoders = [LabelEncoder() for _ in range(len(X[0]))]
     X = array(X)

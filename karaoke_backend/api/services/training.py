@@ -14,18 +14,22 @@ log_path = path.normpath(base_path + sep + "log")
 
 
 class Training:
-    def train(self, _):
-        return_dict = {}
-        X, _, _, df = gen_metadata()
-
-        y = df["Songs"].to_numpy()
-
+    def split(self, X, y):
         X_train, X_test, y_train, _ = train_test_split(
             X,
             y,
             test_size=knn_constants.TEST_SIZE,
             random_state=knn_constants.RANDOM_STATE,
         )
+        return X_train, X_test, y_train
+
+    def train(self, _):
+        return_dict = {}
+        X, _, _, df = gen_metadata()
+
+        y = df["Songs"].to_numpy()
+
+        X_train, X_test, y_train = self.split(X, y)
 
         knn_model = KNeighborsClassifier(n_neighbors=knn_constants.N_NEIGHBOURS)
         knn_model.fit(X_train, y_train)

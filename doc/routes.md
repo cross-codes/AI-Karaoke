@@ -69,7 +69,12 @@ Type `E1` if the model training failed
         "<Integer 2>",
         "<Integer 3>"
     ],
-    "prediction": "<string, 4>"
+    "prediction": [
+        "<string, 4">,
+        "<string, 5">,
+        "<string, 6">,
+        "<string, 7">
+    ]
 }
 ```
 
@@ -80,7 +85,7 @@ For this request:
 * String 1 should be one of `Happy` or `Sad`
 * String 2 should be one of `High`, `Medium` or `Low`
 * String 3 should be one of `Fast`, `Mid-tempo` or `Slow`
-* String 4 will be a quoted string
+* String 4 - 7 will be quoted strings that are song recommendations
 
 If any of these specifications are not met, an error of type `E1` will be
 encountered with a relevant message
@@ -89,7 +94,5 @@ encountered with a relevant message
 
 ## Note
 
-The KNN model is serialized every time the `/training` route is requested and
-the model training is completed, so the cached data (`knn_model.joblib`) is used
-for all future predictions. It is recommended to occasionally send requests to this
-route in order to re-train the data to prevent redundancy in the predictions.
+To use the model, first send a GET request to `/training`, and then send the
+POST request to `/prediction`, to ensure unique responses every time.
