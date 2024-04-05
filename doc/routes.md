@@ -85,7 +85,7 @@ For this request:
 * String 1 should be one of `Happy` or `Sad`
 * String 2 should be one of `High`, `Medium` or `Low`
 * String 3 should be one of `Fast`, `Mid-tempo` or `Slow`
-* String 4 - 7 will be quoted strings that are song recommendations
+* String 4 - 7 will be strings that are song recommendations
 
 If any of these specifications are not met, an error of type `E1` will be
 encountered with a relevant message
